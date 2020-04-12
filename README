@@ -1,6 +1,8 @@
 First time instructions
 -----------------------
+Requires a recent version of emacs (25.2 known to be too old)
 After opening for the first time, run `M-x package-install-selected-packages`
+
 
 Credits
 -------
