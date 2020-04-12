@@ -1,0 +1,11 @@
+# Files not to track
+auto-save-list
+ac-comphist.dat
+tramp
+url
+elpa
+recentf
+
+# Junk Files
+*~
+[#]*[#]

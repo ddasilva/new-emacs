@@ -1,0 +1,8 @@
+First time instructions
+-----------------------
+After opening for the first time, run `M-x package-install-selected-packages`
+
+Credits
+-------
+This is a fork of:
+https://github.com/arthurmassanes/dotfiles/blob/master/emacs
