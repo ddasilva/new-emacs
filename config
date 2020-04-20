@@ -189,7 +189,7 @@ There are two things you can do about this warning:
 (setq echo-keystrokes 0.1) ;; instantly show keystrokes
 
 ;; remove whitespace
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 (put 'downcase-region 'disabled nil)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
