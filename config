@@ -50,7 +50,7 @@ There are two things you can do about this warning:
  '(package-check-signature nil)
  '(package-selected-packages
    (quote
-    (rjsx-mode yaml-mode gitignore-mode ace-jump-mode powerline smartparens auto-complete neotree dashboard dracula-theme expand-region)))
+    (dockerfile-mode rjsx-mode yaml-mode gitignore-mode ace-jump-mode powerline smartparens auto-complete neotree dashboard dracula-theme expand-region)))
  '(pdf-view-midnight-colors (quote ("#282828" . "#f9f5d7")))
  '(rustic-ansi-faces
    ["#282a36" "#ff5555" "#50fa7b" "#f1fa8c" "#61bfff" "#ff79c6" "#8be9fd" "#f8f8f2"])
@@ -148,6 +148,11 @@ There are two things you can do about this warning:
   (add-to-list 'achead:include-directories '"/usr/local/include"))
 (add-hook 'c++-mode-hook 'my:ac-c-header-init)
 (add-hook 'c-mode-hook 'my:ac-c-header-init)
+
+; Javascript with rjsx-mode
+(add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . rjsx-mode))
+
 
 ;; Move lline with alt key VScode-like
 (defun move-line-up ()
