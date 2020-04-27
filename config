@@ -50,7 +50,7 @@ There are two things you can do about this warning:
  '(package-check-signature nil)
  '(package-selected-packages
    (quote
-    (dockerfile-mode rjsx-mode yaml-mode gitignore-mode ace-jump-mode powerline smartparens auto-complete neotree dashboard dracula-theme expand-region)))
+    (google-c-style dockerfile-mode rjsx-mode yaml-mode gitignore-mode ace-jump-mode powerline smartparens auto-complete neotree dashboard dracula-theme expand-region)))
  '(pdf-view-midnight-colors (quote ("#282828" . "#f9f5d7")))
  '(rustic-ansi-faces
    ["#282a36" "#ff5555" "#50fa7b" "#f1fa8c" "#61bfff" "#ff79c6" "#8be9fd" "#f8f8f2"])
@@ -195,6 +195,15 @@ There are two things you can do about this warning:
 
 ;(sp-pair "'" "'") ;; normal quote bug
 (setq echo-keystrokes 0.1) ;; instantly show keystrokes
+
+; Java-mode
+(require 'google-c-style)
+(add-hook 'c-mode-common-hook
+      (lambda()
+            (subword-mode)
+            (google-set-c-style)
+            (google-make-newline-indent)
+            (setq c-basic-offset 4)))
 
 ;; remove whitespace
 ;(add-hook 'before-save-hook 'delete-trailing-whitespace)
