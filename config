@@ -1,5 +1,9 @@
 ;; -*- mode: emacs-lisp; -*-
 
+(if (file-exists-p "~/.emacs.d/config-local-pre")
+    (load "~/.emacs.d/config-local-pre"))
+
+
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
@@ -205,3 +209,7 @@ There are two things you can do about this warning:
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; Load custom config file if it exists
+(if (file-exists-p "~/.emacs.d/config-post")
+    (load "~/.emacs.d/config-post"))
