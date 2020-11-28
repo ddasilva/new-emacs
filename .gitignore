@@ -5,6 +5,7 @@ tramp
 url
 elpa
 recentf
+config-local-*
 
 # Junk Files
 *~
