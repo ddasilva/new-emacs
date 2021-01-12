@@ -3,7 +3,6 @@
 (if (file-exists-p "~/.emacs.d/config-local-pre")
     (load "~/.emacs.d/config-local-pre"))
 
-
 (require 'package)
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
@@ -222,8 +221,12 @@ There are two things you can do about this warning:
 ;; Enable which key mode
 (which-key-mode 1)
 
+; Load an existing TAGS file by searching parent directories
+(let ((my-tags-file (locate-dominating-file default-directory "TAGS")))
+  (when my-tags-file
+    (message "Loading tags file: %s" my-tags-file)
+    (visit-tags-table my-tags-file)))
+
 ;; Load custom config file if it exists
 (if (file-exists-p "~/.emacs.d/config-post")
     (load "~/.emacs.d/config-post"))
-
-
