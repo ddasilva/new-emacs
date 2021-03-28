@@ -227,6 +227,11 @@ There are two things you can do about this warning:
     (message "Loading tags file: %s" my-tags-file)
     (visit-tags-table my-tags-file)))
 
+; Disable backup files
+(setq make-backup-files nil)
+
 ;; Load custom config file if it exists
 (if (file-exists-p "~/.emacs.d/config-post")
     (load "~/.emacs.d/config-post"))
+
+
