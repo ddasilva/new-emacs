@@ -1,0 +1,6 @@
+# -*- mode:conf -*-
+[flake8]
+extend-ignore =
+    W291, # Trailing whitespace
+    W293, # Blank line contains whitespace#
+    E221, # Multiple spaces before operator
