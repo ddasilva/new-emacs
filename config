@@ -239,6 +239,22 @@ There are two things you can do about this warning:
 (global-flycheck-mode 1)
 
 
+;; Configure TRAMP
+  (setq
+    tramp-password-prompt-regexp
+      (concat
+        "^.*"
+        (regexp-opt
+          '("passphrase" "Passphrase"
+            ;; English
+            "password" "Password" "Token_Response"
+	    ;; Deutsch
+            "passwort" "Passwort"
+            ;; Français
+            "mot de passe" "Mot de passe") t)
+        ".*:\0? *"))
+
+
 ;; Load custom config file if it exists
 (if (file-exists-p "~/.emacs.d/config-post")
     (load "~/.emacs.d/config-post"))
